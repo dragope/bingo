@@ -28,11 +28,9 @@ function getBingoCard(){
         3: []
     }
 
-    // Limite de 1 espacio por columna
     for(let i = 0; i <= 8; i++){
         while(blockedNumbers[1].length + blockedNumbers[2].length + blockedNumbers[3].length < i+1){
             let row = Math.floor(Math.random() * 3) + 1
-            // Limite de 4 espacios libres maximo por fila
             if(blockedNumbers[row].length < 4){
                 let numberBlocked = rows[row][i]
                 let div = document.querySelector(`.square${numberBlocked}`)
@@ -42,8 +40,6 @@ function getBingoCard(){
             }
         }
     }
-
-    //Completar fila 1
 
     while(4 - blockedNumbers[1].length > 0){
         let index = Math.floor(Math.random() * 9)
@@ -55,10 +51,8 @@ function getBingoCard(){
             div.classList.remove('bingo-container_square')
         }
     }
-    
-    // //Completar fila 2
 
-     while(4 - blockedNumbers[2].length > 0){
+    while(4 - blockedNumbers[2].length > 0){
         let index = Math.floor(Math.random() * 9) 
         let number = rows[2][index]
         if(!blockedNumbers[2].includes(number) && ((!blockedNumbers[1].includes(rows[1][index]) || !blockedNumbers[3].includes(rows[3][index])))){
@@ -68,8 +62,6 @@ function getBingoCard(){
             div.classList.remove('bingo-container_square')
         }
     }
-    
-    // //Completar fila 3
 
     while(4 - blockedNumbers[3].length > 0){
         let index = Math.floor(Math.random() * 9)
@@ -96,8 +88,6 @@ function getBingoCard(){
             }
         } while(cardNumbers[i-1] == undefined)
     }
-
-    // Asignarle números a los cuadrantes
 
     for(let i = 1; i <= 27; i++){
         switch(i){
