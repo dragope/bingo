@@ -1,0 +1,56 @@
+body{
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    height: 100vh;
+    width: 100vw;
+    background-color: rgb(1, 144, 58);
+}
+.bingo-container{
+    display: flex;
+    flex-direction: row;
+    border: 10px solid white;
+    background-color: white;
+    box-shadow: 0px 0px 10px 2px rgba(0, 0, 0, 0.707);
+    border-radius: 7px;
+}
+.bingo-container_square{
+    width: 70px;
+    height: 70px;
+    border: 2px solid rgb(81, 17, 17);
+    color: rgb(81, 17, 17);
+    font-family: sans-serif;
+    font-size: 35px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.bingo-container_button{
+    margin-top: 5vh;
+    border: 3px solid white;
+    width: 200px;
+    height: 50px;
+    border-radius: 10px;
+    color: white;
+    font-weight: 700;
+    font-family: sans-serif;
+    font-size: 15px;
+    background-color: red;
+    box-shadow: 0px 0px 10px 2px rgba(0, 0, 0, 0.707);
+    cursor: pointer
+}
+.bingo-container_button:hover{
+    background-color: white;
+    color: red;
+    border: 3px solid red
+}
+.empty{
+    background-color: rgb(81, 17, 17);
+    width: 70px;
+    height: 70px;
+    border: 2px solid rgb(81, 17, 17)
+}
